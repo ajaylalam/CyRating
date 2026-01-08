@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/app_background">
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="#C8102E"
+        android:layout_gravity="start"
+        android:elevation="4dp" />
+
+
+    <ImageView
+        android:id="@+id/cycloneLogoCreate"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cy_logo_05"
+        android:scaleType="fitCenter"
+        android:contentDescription="Cyclone Logo"
+        android:adjustViewBounds="true" />
+
+
+    <TextView
+        android:id="@+id/createGroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill Club Details"
+        android:textColor="#C8102E"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp" />
+
+
+    <EditText
+        android:id="@+id/editTextGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Club Name"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:background="@drawable/edittext_bg"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/editTextGroupDesc"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="12dp"
+        android:hint="Write a description about your club "
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:background="@drawable/edittext_bg"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
+
+    <Button
+        android:id="@+id/buttonCreateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Create Club"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="#C8102E"
+        android:elevation="4dp" />
+
+</LinearLayout>

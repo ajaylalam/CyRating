@@ -1,0 +1,49 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed state (deeper red-gold gradient) -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#E6C44E"
+                android:endColor="#B60E26"
+                android:angle="90" /> <!-- top-to-bottom gradient -->
+            <stroke
+                android:width="3dp"
+                android:color="#8B0000"/> <!-- dark red outer border -->
+            <corners android:radius="16dp"/>
+            <padding
+                android:left="16dp"
+                android:top="10dp"
+                android:right="16dp"
+                android:bottom="10dp"/>
+            <shadow
+                android:color="#66000000" />
+        </shape>
+    </item>
+
+    <!-- Default (idle) state -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Gold-to-white gradient background -->
+            <gradient
+                android:startColor="#FFF8E1"
+                android:centerColor="#FFF3C0"
+                android:endColor="#F1BE48"
+                android:angle="270" />
+
+            <!-- Dual-layered stroke for border depth -->
+            <stroke
+                android:width="3dp"
+                android:color="#C8102E"/> <!-- red outer border -->
+            <corners android:radius="16dp"/>
+
+            <!-- Inner gold line for accent -->
+            <solid android:color="@android:color/transparent" />
+            <padding
+                android:left="16dp"
+                android:top="10dp"
+                android:right="16dp"
+                android:bottom="10dp"/>
+        </shape>
+    </item>
+</selector>

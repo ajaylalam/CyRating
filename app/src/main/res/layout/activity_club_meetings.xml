@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/app_background">
+
+    <!-- Top bar: Back + club name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp" />
+
+        <TextView
+            android:id="@+id/tvClubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Club Meetings"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptyMeetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading meetings..."
+        android:paddingTop="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressMeetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp" />
+
+    <ListView
+        android:id="@+id/listMeetings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

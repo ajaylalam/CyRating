@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/app_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#C8102E"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp" />
+
+        <ImageView
+            android:id="@+id/groupImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/cy_logo_05"
+            android:background="@drawable/white"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="-40dp"
+            android:contentDescription="Group Image" />
+
+        <Button
+            android:id="@+id/btnChangePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Picture"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:layout_marginTop="8dp"
+            android:elevation="3dp" />
+
+        <EditText
+            android:id="@+id/editGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="2dp" />
+
+        <EditText
+            android:id="@+id/editGroupDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💾 Save Changes"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:elevation="3dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Member"
+                android:backgroundTint="#C8102E"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp"
+                android:elevation="3dp" />
+
+            <Button
+                android:id="@+id/btnMeetingMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meetings"
+                android:backgroundTint="#F1BE48"
+                android:textColor="#000000"
+                android:elevation="3dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Group Members"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#C8102E"
+            android:layout_marginTop="20dp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/membersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClearChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#F1BE48"
+                android:text="🧹 Clear Chat"
+                android:textColor="#000000"
+                android:elevation="3dp" />
+
+            <Button
+                android:id="@+id/btnExitGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C8102E"
+                android:text="🚪 Exit Group"
+                android:textColor="@android:color/white"
+                android:elevation="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

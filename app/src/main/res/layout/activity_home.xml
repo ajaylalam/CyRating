@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:id="@+id/home_page"
+    android:background="@color/app_background"
+    >
+
+    <!-- Welcome Text -->
+    <ImageView
+        android:id="@+id/centerLogo"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/tornadocy"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="#C8102E"
+            android:text="Log Out"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textColor="#F1BE48"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cyclone Professor Rating"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#F1BE48"
+        android:textStyle="bold"
+        android:layout_below="@+id/header"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <!--
+        things to add to homepage:
+        1. search for classes/professors/clubs
+        2. display upcoming assignments
+        3. display groups with recent messages
+    -->
+    <LinearLayout
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/welcome_text"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:hint="Search courses or professors..."
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#F1BE48"
+            android:textSize="15sp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="32dp"
+            android:background="@drawable/rounded_button"
+            android:text="Search"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:elevation="3dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/coursesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/searchArea"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Enrolled Courses"
+        android:textColor="#F1BE48"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <GridLayout
+        android:id="@+id/classDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_below="@+id/coursesHeader">
+
+<!--        <TextView-->
+<!--            android:layout_margin="3dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="16dp"-->
+<!--            android:background="@drawable/rounded_button"-->
+<!--            android:backgroundTint="#822433" />-->
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/groupHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/classDisplay"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Groups"
+        android:textColor="#F1BE48"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <GridLayout
+        android:id="@+id/groupDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_below="@+id/groupHeader">
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/messagesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/groupDisplay"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Direct Messages"
+        android:textColor="#F1BE48"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <GridLayout
+        android:id="@+id/messagesDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:layout_below="@+id/messagesHeader">
+    </GridLayout>
+</RelativeLayout>

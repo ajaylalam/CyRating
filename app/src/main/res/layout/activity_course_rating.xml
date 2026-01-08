@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="24dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="6dp"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#C8102E"
+            android:layout_gravity="start"
+            android:elevation="4dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/rateCourseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate This Course"
+            android:textColor="#C8102E"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginBottom="2dp"
+            android:progressTint="#C8102E"
+            android:secondaryProgressTint="#C8102E"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Comment Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add your comment:"
+            android:textColor="#F1BE48"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Comment Box -->
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="12dp"
+            android:hint="Write your feedback here..."
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#808080"
+            android:background="@drawable/edittext_bg"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:overScrollMode="always"
+            android:scrollbars="vertical" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Submit Rating"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#C8102E"
+            android:elevation="4dp" />
+
+        <!-- Average Rating -->
+        <TextView
+            android:id="@+id/averageRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Rating: 0.0 ★"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#C8102E"
+            android:layout_marginTop="30dp" />
+
+        <!-- Review Section Title -->
+        <TextView
+            android:id="@+id/reviewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Reviews"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#C8102E"
+            android:layout_marginTop="15dp" />
+
+        <!-- RecyclerView for comments -->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/reviewsRecyclerView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:nestedScrollingEnabled="false"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:paddingHorizontal="20dp" />-->
+
+        <ScrollView
+            android:id="@+id/commentsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/reviewTitle"
+            android:layout_marginTop="12dp"
+            android:fillViewport="true">
+
+            <GridLayout
+                android:id="@+id/commentsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:orientation="horizontal"
+                android:padding="8dp" />
+        </ScrollView>
+
+    </LinearLayout>
+</ScrollView>

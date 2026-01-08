@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/comment_card_bg"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/commentClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMS311"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/commentUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="by alice123"
+        android:textSize="13sp"
+        android:textColor="#444444"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Great class!"
+        android:textSize="15sp"
+        android:textColor="#222222"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/commentProfessorResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Professor: Thanks!"
+        android:textSize="14sp"
+        android:textColor="#1a4d8f"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/respondButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Respond"
+            android:textSize="13sp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/isu_red"/>
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="13sp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/isu_red"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

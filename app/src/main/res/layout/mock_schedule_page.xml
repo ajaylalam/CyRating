@@ -1,0 +1,282 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mock_schedule_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".CreateScheduleActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_textview"
+            android:layout_alignParentStart="true"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_textview"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="4dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/header"
+        android:layout_below="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="Iowa State Course Rating"
+        android:textColor="#F1BE48"
+        android:textSize="25sp"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/schedules_header"
+        android:layout_below="@+id/header"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Saved Schedule"
+        android:textSize="20sp"
+        android:textColor="#F1BE48"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schedules_header">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/name_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/search_bar_bg"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter a Name for this Schedule"
+                    android:textColor="#212121"
+                    android:textColorHint="#9E9E9E"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/schedule_grid"
+                android:layout_below="@id/schedules_header"
+                android:columnCount="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <!-- Example header cells -->
+
+                <TextView
+                    android:id="@+id/M"
+                    android:text="M"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:background="@drawable/week_header"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/T"
+                    android:text="T"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:background="@drawable/week_header"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/W"
+                    android:text="W"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:background="@drawable/week_header"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/R"
+                    android:text="R"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:background="@drawable/week_header"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/F"
+                    android:text="F"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:background="@drawable/week_header"
+                    android:textColor="@color/white" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="4dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="COM S 319"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:textColor="#212121"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:background="@drawable/calendar_class_bg" />-->
+
+
+            </GridLayout>
+
+            <!-- Added Classes Display -->
+            <LinearLayout
+                android:id="@+id/added_classes_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/app_background"
+                android:elevation="2dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/save_exit_btn"
+                    android:text="Save and Exit"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/rounded_textview"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:elevation="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/delete_btn"
+                    android:text="Delete Schedule"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/rounded_textview"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:elevation="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/search_bar_bg"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Search..."
+                    android:textColor="#212121"
+                    android:textColorHint="#9E9E9E"
+                    android:textSize="16sp"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@color/app_background"/>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:background="@drawable/class_card_bg"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:layout_marginVertical="6dp"-->
+<!--                    android:elevation="3dp"-->
+<!--                    android:gravity="center_vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="COM S 327 - MWF"-->
+<!--                        android:textColor="#212121"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Add"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:background="@drawable/rounded_button"-->
+<!--                        android:paddingHorizontal="16dp"-->
+<!--                        android:paddingVertical="6dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:elevation="2dp" />-->
+
+<!--                </LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- base colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- ISU theme colors -->
+    <color name="isu_red">#C8102E</color>
+    <color name="isu_gold">#F1BE48</color>
+    <color name="gray">#E0E0E0</color>
+
+    <!-- NEW: app colors for light mode -->
+    <color name="app_background">@color/white</color>
+    <color name="app_text_primary">@color/black</color>
+
+    <color name="colorPrimary">#C8102E</color>   <!-- Cyclone red -->
+    <color name="colorPrimaryDark">#8C0B20</color>
+    <color name="colorAccent">#F1BE48</color>   <!-- Cyclone gold -->
+
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceAlt">#F5F5F5</color>
+    <color name="colorDanger">#D32F2F</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+
+    <color name="isu_surface_dark">#1F1F23</color> <!-- dark card bg -->
+    <color name="isu_text_primary">#FFFFFF</color>
+    <color name="isu_text_secondary">#D0D0D0</color>
+</resources>

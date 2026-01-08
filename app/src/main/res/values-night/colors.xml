@@ -1,0 +1,5 @@
+<resources>
+    <!-- app colors for dark mode -->
+    <color name="app_background">@color/black</color>
+    <color name="app_text_primary">@color/white</color>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+
+    <!-- back button-->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="#C8102E"
+        android:layout_gravity="start"
+        android:elevation="4dp" />
+
+    <!-- ===== Title ===== -->
+    <ImageView
+        android:id="@+id/cycloneLogo"
+        android:layout_width="354dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="-20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Cyclone Logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cy_logo_03" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="Profile"
+        android:textColor="#C8102E"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <!-- ===== White Card Container (Inner Form Layout) ===== -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@color/app_background"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- First Name -->
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Last Name -->
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Last Name"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="netid@iastate.edu"
+            android:enabled="true"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Major -->
+        <EditText
+            android:id="@+id/editTextMajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Major"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Minor -->
+        <EditText
+            android:id="@+id/editTextMinor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Minor (optional)"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Graduation Year -->
+        <EditText
+            android:id="@+id/editTextGradYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Expected Graduation Year"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <!-- Create Profile Button -->
+        <Button
+            android:id="@+id/btnCreateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Create Profile"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E" />
+    </LinearLayout>
+
+    <!-- ===== Bottom ISU Banner ===== -->
+    <ImageView
+        android:id="@+id/isuBanner"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="-30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Iowa State University Logo"
+        android:scaleType="fitXY"
+        android:src="@drawable/isu_name" />
+
+</LinearLayout>

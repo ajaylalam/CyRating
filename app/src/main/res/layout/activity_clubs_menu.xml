@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clubs_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".ClubsMenuActivity">
+
+    <!-- background image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cy_logo_05"
+        android:alpha="0.1"/>
+
+    <!-- BACK (top-left) -->
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Back"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:background="@drawable/rounded_textview"
+        android:layout_margin="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- PROFILE (top-right) -->
+    <TextView
+        android:id="@+id/profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_textview"
+        android:layout_margin="20dp"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- HEADER -->
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_below="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iowa State Clubs"
+        android:textColor="#F1BE48"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:layout_marginTop="-10dp" />
+
+    <!-- Enrolled + Create buttons (under header) -->
+    <!-- Enrolled + Create clubs tabs (like footer style) -->
+    <LinearLayout
+        android:id="@+id/top_controls"
+        android:layout_below="@id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/btnEnrolledClubs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Enrolled Clubs"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnCreateClub"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Create Club"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- loading bar (optional, for network) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_controls"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Available clubs header -->
+    <TextView
+        android:id="@+id/group_subtitle"
+        android:layout_below="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available Clubs"
+        android:textColor="#C8102E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp" />
+
+    <!-- Available clubs list -->
+
+    <ListView
+        android:id="@+id/listClubs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/group_subtitle"
+        android:layout_above="@id/footer"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp" />
+    <!-- footer nav bar -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/classes_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Classes" />
+
+        <TextView
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/groups_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Groups" />
+
+        <TextView
+            android:id="@+id/clubs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Clubs" />
+
+        <TextView
+            android:id="@+id/create_schedule"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Mock Schedule" />
+    </LinearLayout>
+
+</RelativeLayout>

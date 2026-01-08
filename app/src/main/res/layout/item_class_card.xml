@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_class_card"
+    android:padding="14dp"
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Course ID chip (gold pill) -->
+    <TextView
+        android:id="@+id/textCourseId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_course_chip"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="COM S 309"
+        android:textAllCaps="true"
+        android:textColor="@color/isu_surface_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Course Name -->
+    <TextView
+        android:id="@+id/textCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Software Development Practices"
+        android:textColor="@color/isu_text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:maxLines="2" />
+
+</LinearLayout>

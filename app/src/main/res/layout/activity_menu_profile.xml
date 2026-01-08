@@ -1,0 +1,121 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/app_background"
+    >
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="#C8102E"
+        android:layout_gravity="start"
+        android:elevation="4dp" />
+
+
+
+    <ImageView
+        android:id="@+id/cycloneLogoMenu"
+        android:layout_width="302dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Cyclone Logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cy_logo_05" />
+
+
+    <TextView
+        android:id="@+id/menuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_marginTop="0dp"
+        android:text="Profile Menu"
+        android:textColor="#C8102E"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonGoToEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Account"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:layout_marginBottom="15dp"
+            android:elevation="4dp" />
+
+
+        <Button
+            android:id="@+id/buttonGoToDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Account"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#C8102E"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/buttonLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#C8102E"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/buttonMuteAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mute All"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:layout_marginBottom="15dp"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/buttonMuteSingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mute a Single User"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:layout_marginBottom="15dp"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/buttonUnmuteSingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unmute a Single User"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#C8102E"
+            android:layout_marginBottom="15dp"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

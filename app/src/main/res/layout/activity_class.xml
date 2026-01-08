@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassActivity"
+    android:id="@+id/class_page"
+    android:background="@color/app_background"
+    >
+
+    <!-- Welcome Text -->
+    <ImageView
+        android:id="@+id/centerLogo"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/tornadocy"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="32dp"
+            android:background="@drawable/rounded_button"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:elevation="3dp" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:text="Profile"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/className"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Class Name"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#F1BE48"
+        android:textStyle="bold"
+        android:layout_below="@+id/header"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <TextView
+        android:id="@+id/rating_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/className"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Rate Professor"
+        android:background="@drawable/rounded_textview"
+        android:textColor="#F1BE48"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <TextView
+        android:id="@+id/commentsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/rating_btn"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Comments"
+        android:textColor="#F1BE48"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <EditText
+        android:id="@+id/enterComment"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/commentsHeader"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edittext_bg"
+        android:hint="Write a comment..."
+        android:padding="16dp"
+        android:textColor="#F1BE48"
+        android:textColorHint="#F1BE48"
+        android:textSize="15sp"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/postBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterComment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="Post Comment"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:elevation="3dp" />
+
+    <ScrollView
+        android:id="@+id/commentsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/postBtn"
+        android:layout_marginTop="12dp"
+        android:fillViewport="true">
+
+        <GridLayout
+            android:id="@+id/commentsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:orientation="horizontal"
+            android:padding="8dp" />
+    </ScrollView>
+
+</RelativeLayout>

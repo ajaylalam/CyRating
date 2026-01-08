@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Focused: bright white background with gold border -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- pure white -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#F1BE48"/> <!-- gold border -->
+        </shape>
+    </item>
+
+    <!-- Default: soft white/grey background with subtle red border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F8F8F8"/> <!-- off-white tone -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="1dp" android:color="#F1BE48"/> <!-- thin red border -->
+        </shape>
+    </item>
+
+</selector>
