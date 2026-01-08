@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,intellij,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,intellij,macos
 
@@ -275,11 +276,22 @@ obj/
 .project
 .cproject
 .settings/
+=======
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+>>>>>>> 576ae1723f142667022d8e4f8ac91cd615f14885
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
+<<<<<<< HEAD
 *.war
 *.ear
 
@@ -302,3 +314,16 @@ hs_err_pid*
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,intellij,macos
+=======
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+>>>>>>> 576ae1723f142667022d8e4f8ac91cd615f14885
